@@ -1,4 +1,5 @@
-##Uses MakeCode Extension
+## Uses MakeCode Extension
+
 [https://github.com/BrickHackers/pxt-IR-VS1838]
 by BrickHackers
 
