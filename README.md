@@ -1,6 +1,6 @@
 ## Uses MakeCode Extension
 
-[https://github.com/BrickHackers/pxt-IR-VS1838]
+https://github.com/BrickHackers/pxt-IR-VS1838
 by BrickHackers
 
 > Open this page at [https://dipugit-creator.github.io/ir_rgb/](https://dipugit-creator.github.io/ir_rgb/)
