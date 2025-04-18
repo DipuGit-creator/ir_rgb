@@ -1,0 +1,30 @@
+{
+    "name": "IR_RGB",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "IR Remote Receiver and Controller Kit": "github:BrickHackers/pxt-IR-VS1838#v2.0.0",
+        "IR": "github:elecfreaks/pxt-ir#b98ceffc22eb54086733bff8430d5e0ab42728fb",
+        "power": "github:microbit-foundation/pxt-microbit-v2-power#v0.2.7",
+        "cutebot": "github:elecfreaks/pxt-cutebot#v6.2.4"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "main.py"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "7.0.61",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
