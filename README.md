@@ -5,6 +5,10 @@ by BrickHackers
 
 > Open this page at [https://dipugit-creator.github.io/ir_rgb/](https://dipugit-creator.github.io/ir_rgb/)
 
+
+## Compatibility 
+Uses common cathode RGB LED, if using common anode, please modify code accordingly (change the "analogWrite" from 1023 to 0 and vice versa and change all "-" to "+" and vice versa in the Math blocks, for the brightness control.)
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
