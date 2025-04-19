@@ -55,6 +55,7 @@ basic.forever(function () {
                 pins.analogWritePin(AnalogPin.P5, P5C + CHx)
                 pins.analogWritePin(AnalogPin.P6, P6C + CHx)
                 pins.analogWritePin(AnalogPin.P7, P7C + CHx)
+                music.play(music.stringPlayable("B A - - - - - - ", 360), music.PlaybackMode.InBackground)
             }
         } else if (code == 98) {
             P7C = randint(0, 1023)
@@ -65,12 +66,14 @@ basic.forever(function () {
             pins.analogWritePin(AnalogPin.P7, P7C)
             CH = 1
             CHx = 0
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
         } else if (code == 226) {
             if (CH == 1) {
                 CHx += -50
                 pins.analogWritePin(AnalogPin.P5, P5C + CHx)
                 pins.analogWritePin(AnalogPin.P6, P6C + CHx)
                 pins.analogWritePin(AnalogPin.P7, P7C + CHx)
+                music.play(music.stringPlayable("A B - - - - - - ", 360), music.PlaybackMode.InBackground)
             }
         } else if (code == 34) {
             CH = 0
@@ -87,8 +90,10 @@ basic.forever(function () {
             SELECTED_COLOR = 9999
             CH = 0
             CHx = 0
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
         } else if (code == 224) {
             CH = 0
+            music.play(music.stringPlayable("B A - - - - - - ", 360), music.PlaybackMode.InBackground)
             if (mode == 1 && SELECTED_COLOR == 0) {
                 P5x += 50
                 pins.analogWritePin(AnalogPin.P5, P5x)
@@ -106,6 +111,7 @@ basic.forever(function () {
             }
         } else if (code == 168) {
             CH = 0
+            music.play(music.stringPlayable("A B - - - - - - ", 360), music.PlaybackMode.InBackground)
             if (mode == 1 && SELECTED_COLOR == 0) {
                 P5x += -50
                 pins.analogWritePin(AnalogPin.P5, P5x)
@@ -122,6 +128,11 @@ basic.forever(function () {
                 pins.analogWritePin(AnalogPin.P7, whitex)
             }
         } else if (code == 144) {
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
+            pins.analogWritePin(AnalogPin.P7, 1023)
+            pins.analogWritePin(AnalogPin.P5, 1023)
+            pins.analogWritePin(AnalogPin.P6, 1023)
+            basic.pause(200)
             toggleMode()
             pins.analogWritePin(AnalogPin.P7, 1023)
             pins.analogWritePin(AnalogPin.P5, 1023)
@@ -134,16 +145,18 @@ basic.forever(function () {
             CH = 0
             CHx = 0
         } else if (code == 104) {
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
             pins.analogWritePin(AnalogPin.P7, 0)
             pins.analogWritePin(AnalogPin.P5, 0)
             pins.analogWritePin(AnalogPin.P6, 0)
             SELECTED_COLOR = -1
             CH = 0
         } else if (code == 152) {
-        	
+            CH = 0
         } else if (code == 176) {
-        	
+            CH = 0
         } else if (code == 48) {
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
             if (mode == 0) {
                 pins.analogWritePin(AnalogPin.P7, 1023)
                 pins.analogWritePin(AnalogPin.P5, 0)
@@ -155,6 +168,7 @@ basic.forever(function () {
             SELECTED_COLOR = 0
             CH = 0
         } else if (code == 24) {
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
             if (mode == 0) {
                 pins.analogWritePin(AnalogPin.P7, 1023)
                 pins.analogWritePin(AnalogPin.P5, 1023)
@@ -166,6 +180,7 @@ basic.forever(function () {
             SELECTED_COLOR = 1
             CH = 0
         } else if (code == 122) {
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
             if (mode == 0) {
                 pins.analogWritePin(AnalogPin.P6, 1023)
                 pins.analogWritePin(AnalogPin.P5, 1023)
@@ -177,6 +192,7 @@ basic.forever(function () {
             SELECTED_COLOR = 2
             CH = 0
         } else if (code == 16) {
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
             discoMode = true
             start = input.runningTime()
             while (input.runningTime() - start < 10000) {
@@ -198,6 +214,8 @@ basic.forever(function () {
         } else if (code == 74) {
             CH = 0
         } else if (code == 82) {
+            music.play(music.stringPlayable("C5 - - - - - - - ", 360), music.PlaybackMode.InBackground)
+            basic.pause(100)
             CH = 0
             control.reset()
         } else {
