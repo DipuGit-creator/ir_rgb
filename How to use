@@ -1,0 +1,8 @@
+Circuit: 
+IR receiver (IN) - Pin 2
+RGB LED Red - Pin 5
+RGB LED Green - Pin 7
+RGB LED Blue - Pin 6
+
+Point Remote towards IR receiver to operate. 
+Some buttons do not uet work. 
